@@ -3,11 +3,11 @@
 
 /dts-v1/;
 
-#include "msm8998-mtp.dtsi"
+#include "msm8998-razer-cheryl.dtsi"
 
 / {
-	model = "Qualcomm Technologies, Inc. MSM8998 v1 MTP";
-	compatible = "qcom,msm8998-mtp";
+	model = "Razer Phone (cheryl)";
+	compatible = "razer,cheryl","qcom,msm8998";
 
-	qcom,board-id = <8 0>;
+	qcom,board-id = <8 0 1 0>;
 };
