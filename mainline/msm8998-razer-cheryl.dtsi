@@ -136,13 +136,6 @@
 	};
 };
 
-&qusb2phy {
-	status = "okay";
-
-	vdda-pll-supply = <&vreg_l12a_1p8>;
-	vdda-phy-dpdm-supply = <&vreg_l24a_3p075>;
-};
-
 &rpm_requests {
 	pm8998-regulators {
 		compatible = "qcom,rpm-pm8998-regulators";
@@ -415,6 +408,19 @@
 			bias-disable;
 		};
 	};
+
+	blsp2_i2c0_sleep: blsp2_i2c0_sleep {
+		mux {
+			pins = "gpio55", "gpio56";
+			function = "blsp_i2c7";
+		};
+
+		config {
+			pins = "gpio55", "gpio56";
+			drive-strength = <2>;
+			bias-pull-up;
+		};
+	};
 };
 
 &sdhc2 {
@@ -466,6 +472,13 @@
 
 	vdda-phy-supply = <&vreg_l1a_0p875>;
 	vdda-pll-supply = <&vreg_l2a_1p2>;
+};
+
+&qusb2phy {
+	status = "okay";
+
+	vdda-pll-supply = <&vreg_l12a_1p8>;
+	vdda-phy-dpdm-supply = <&vreg_l24a_3p075>;
 };
 
 &wifi {
