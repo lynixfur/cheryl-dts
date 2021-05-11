@@ -1,6 +1,7 @@
 # Cheryl Mainline Kernel v5.13
 
 **Requirements for booting mainline**
+* [x] Voltage Regulators - handles power to the different gpios
 * [ ] CPU – number of cpus, clustering, cache;
 * [ ] Memory – amount and location of available memory
 * [ ] Reserved Memory – locations of memory that the kernel should stay out of
